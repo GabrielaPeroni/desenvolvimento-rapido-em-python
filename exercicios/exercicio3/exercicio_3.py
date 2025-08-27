@@ -19,10 +19,6 @@ class Exercicio3:
                 print("arquivo não encontrado... criando o arquivo")
                 arquivo.write("Arquivo criado.")
 
-            with open(self.nome_arquivo, 'r') as arquivo:
-                conteudo = arquivo.read()
-                print("conteúdo do novo arquivo:\n", conteudo)
-
     def contar_linhas_nao_vazias(self):
         """
             2) (Contar linhas não vazias) Leia um arquivo “frases.txt” e exiba quantas linhas não estão vazias
