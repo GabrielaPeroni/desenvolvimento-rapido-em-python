@@ -1,0 +1,3 @@
+Nome: a
+Média: 1.50
+Status: Reprovado
