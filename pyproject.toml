@@ -1,0 +1,20 @@
+[project]
+name = "desenvolvimento-rapido-em-python"
+version = "0.1.0"
+description = "projeto para a materia 'desenvolvimento rapido em python'"
+authors = [
+    {name = "GabrielaPeroni",email = "gabriela.campos.dev@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django (>=5.2.6,<6.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false

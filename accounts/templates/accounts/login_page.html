@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login - Maricá City</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    {% if messages %}
+      {% for message in messages %}
+        <p style="color:red;">{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <label>Username:</label>
+      <input type="text" name="username" required /><br />
+      <label>Password:</label>
+      <input type="password" name="password" required /><br />
+      <button type="submit">Login</button>
+    </form>
+    <p>
+      <a href="{% url 'register' %}?next={{ next }}">Don't have an account? Register here</a>
+    </p>
+  </body>
+</html>
