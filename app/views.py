@@ -1,4 +1,7 @@
 from django.shortcuts import render
 
-def landing(request):
-    return render(request, "app/index.html")
+def home(request):
+    return render(request, "index.html")
+
+def sobre(request):
+    return render(request, "sobre.html")

@@ -17,12 +17,12 @@ def login_view(request):
                 request.session['username'] = username
                 return redirect(request.POST.get('next', '/'))
             else:
-                messages.error(request, "Invalid password")
+                messages.error(request, "Senha invalida")
                 return redirect(request.path + f"?next={next_page}")
         except Credential.DoesNotExist:
-            messages.error(request, "No account found")
+            messages.error(request, "Conta nao encontrada")
 
-    return render(request, 'accounts/login_page.html', {'next': next_page})
+    return render(request, 'login_page.html', {'next': next_page})
 
 
 def logout_view(request):
@@ -45,7 +45,7 @@ def register_view(request):
         password = request.POST.get('password')
 
         if Credential.objects.filter(username=username).exists():
-            messages.error(request, "Username already taken")
+            messages.error(request, "Usuario ja existe")
             return redirect(request.path + f"?next={next_page}")
 
         # Create new user

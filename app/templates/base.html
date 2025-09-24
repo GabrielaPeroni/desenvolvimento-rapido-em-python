@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maricá City | {% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <h1>Maricá City logo</h1>
+
+    {% include 'login_snippet.html' %}
+
+    <nav>
+      <a href="{% url 'home' %}">Home</a> |
+      <a href="{% url 'explore' %}">Explorar</a> |
+      <a href="#">Mapa</a> |
+      <a href="{% url 'sobre' %}">Sobre</a> |
+    </nav>
+
+    <hr>
+
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

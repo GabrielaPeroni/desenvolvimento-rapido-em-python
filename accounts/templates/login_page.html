@@ -13,14 +13,14 @@
     <form method="post">
       {% csrf_token %}
       <input type="hidden" name="next" value="{{ next }}" />
-      <label>Username:</label>
+      <label>Usuario:</label>
       <input type="text" name="username" required /><br />
-      <label>Password:</label>
+      <label>Senha:</label>
       <input type="password" name="password" required /><br />
       <button type="submit">Login</button>
     </form>
     <p>
-      <a href="{% url 'register' %}?next={{ next }}">Don't have an account? Register here</a>
+      <a href="{% url 'register' %}?next={{ next }}">Não tem uma conta? Registre aqui</a>
     </p>
   </body>
 </html>

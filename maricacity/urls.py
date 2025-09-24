@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("app.urls")),          # landing page
+    path("", include("app.urls")),          # home page
     path("accounts/", include("accounts.urls")),  # login system
+    path("explorar/", include("explore.urls")),
 ]

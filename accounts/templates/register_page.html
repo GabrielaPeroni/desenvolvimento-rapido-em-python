@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Register - Maricá City</title>
+    <title>Registro - Maricá City</title>
     <script>
       async function checkUsername() {
         const username = document.getElementById('username').value
@@ -23,7 +23,7 @@
     </script>
   </head>
   <body>
-    <h1>Register</h1>
+    <h1>Registro</h1>
     {% if messages %}
       {% for message in messages %}
         <p style="color:red;">{{ message }}</p>
@@ -32,10 +32,10 @@
     <form method="post">
       {% csrf_token %}
       <input type="hidden" name="next" value="{{ next }}" />
-      <label>Username:</label>
+      <label>Usuario:</label>
       <input type="text" name="username" id="username" value="{{ prefill_username }}" oninput="checkUsername()" required />
       <span id="username-feedback"></span><br />
-      <label>Password:</label>
+      <label>Senha:</label>
       <input type="password" name="password" required /><br />
       <button type="submit">Register</button>
     </form>
