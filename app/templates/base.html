@@ -1,45 +1,87 @@
 <!DOCTYPE html>
-<html class="sl-theme-light">
+<html>
   <head>
-    <title>
-      Maricá City |{% block title %}
+    <html class="sl-theme-light">
+      <head>
+        <title>
+          Maricá City |{% block title %}
 
-      {% endblock %}
-    </title>
+          {% endblock %}
+        </title>
+        {% load static %}
 
-    {% load static %}
+        <link rel="stylesheet" media="(prefers-color-scheme:light)" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+        <link rel="stylesheet" media="(prefers-color-scheme:dark)" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" />
 
-    <link rel="stylesheet" media="(prefers-color-scheme:light)" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
-    <link rel="stylesheet" media="(prefers-color-scheme:dark)" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" />
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <noscript>
+          <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
+        </noscript>
 
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      </head>
+      <body class="index is-preload">
+        <div id="page-wrapper">
+          <!-- Header -->
+          <header id="header" class="alt">
+            <h1 id="logo"><a href="{% url 'home' %}">Marica<span>City</span></a></h1>
+            <nav id="nav">
+              <ul>
+                <li class="current"><a href="{% url 'home' %}" variant="text">Home</a></li>
+                <li class="current"><a href="{% url 'sobre' %}" variant="text">Sobre</a></li>
+
+
+                <li class="submenu">
+                  <a href="#">Explorar</a>
+                  <ul>
+                    <li><a href="{% url 'explore' %}" variant="text">Explorar</a></li>
+                    <li><a href="{% url 'sobre' %}" variant="text">Noticias</a></li>
+                    <li class="submenu">
+                      <a href="#">Categorias</a>
+                      <ul>
+                        <li><a href="#">Cat A</a></li>
+                        <li><a href="#">Cat B</a></li>
+                        <li><a href="#">Cat C</a></li>
+                        <li><a href="#">Cat D</a></li>
+                        <li><a href="#">Cat E</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+
+                <li class="submenu">
+                  <a href="#">Mapas</a>
+                  <ul>
+                    <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                    <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                    <li><a href="no-sidebar.html">No Sidebar</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="submenu">
+                      <a href="#">Submenu</a>
+                      <ul>
+                        <li><a href="#">Dolore Sed</a></li>
+                        <li><a href="#">Consequat</a></li>
+                        <li><a href="#">Lorem Magna</a></li>
+                        <li><a href="#">Sed Magna</a></li>
+                        <li><a href="#">Ipsum Nisl</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="button primary">Sign Up</a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          
+            {% block content %}
+
+            {% endblock %}
+        </div>
+      </body>
+    </html>
   </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="{% url 'home' %}"><img src="{% static 'images/maricacity_logo.png' %}" alt="Maricá City Logo" class="logo-img" /></a>
-      </div>
-
-      <!-- Navigation -->
-      <nav class="nav-links">
-        <sl-button href="{% url 'home' %}" variant="text">Home</sl-button>
-        <sl-button href="{% url 'explore' %}" variant="text">Explorar</sl-button>
-        <sl-button href="#" variant="text">Mapa</sl-button>
-        <sl-button href="{% url 'sobre' %}" variant="text">Sobre</sl-button>
-      </nav>
-
-      <div class="login-section">
-        {% include 'login_snippet.html' %}
-      </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main>
-      {% block content %}
-
-      {% endblock %}
-    </main>
-
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
-  </body>
 </html>
