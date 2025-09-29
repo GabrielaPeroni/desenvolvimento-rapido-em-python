@@ -23,7 +23,6 @@
       </head>
       <body class="index is-preload">
         <div id="page-wrapper">
-          <!-- Header -->
           <header id="header" class="alt">
             <h1 id="logo"><a href="{% url 'home' %}">Marica<span>City</span></a></h1>
             <nav id="nav">
@@ -33,12 +32,10 @@
 
 
                 <li class="submenu">
-                  <a href="#">Explorar</a>
+                  <a href="#">Explore</a>
                   <ul>
-                    <li><a href="{% url 'explore' %}" variant="text">Explorar</a></li>
-                    <li><a href="{% url 'sobre' %}" variant="text">Noticias</a></li>
                     <li class="submenu">
-                      <a href="#">Categorias</a>
+                      <a href="#">Cultura</a>
                       <ul>
                         <li><a href="#">Cat A</a></li>
                         <li><a href="#">Cat B</a></li>
@@ -47,6 +44,47 @@
                         <li><a href="#">Cat E</a></li>
                       </ul>
                     </li>
+                    <li class="submenu">
+                      <a href="#">Compras</a>
+                      <ul>
+                        <li><a href="#">Cat A</a></li>
+                        <li><a href="#">Cat B</a></li>
+                        <li><a href="#">Cat C</a></li>
+                        <li><a href="#">Cat D</a></li>
+                        <li><a href="#">Cat E</a></li>
+                      </ul>
+                    </li>
+                    <li class="submenu">
+                      <a href="#">Comidas & Bebidas</a>
+                      <ul>
+                        <li><a href="#">Cat A</a></li>
+                        <li><a href="#">Cat B</a></li>
+                        <li><a href="#">Cat C</a></li>
+                        <li><a href="#">Cat D</a></li>
+                        <li><a href="#">Cat E</a></li>
+                      </ul>
+                    </li>
+                    <li class="submenu">
+                      <a href="#">Natureza</a>
+                      <ul>
+                        <li><a href="#">Cat A</a></li>
+                        <li><a href="#">Cat B</a></li>
+                        <li><a href="#">Cat C</a></li>
+                        <li><a href="#">Cat D</a></li>
+                        <li><a href="#">Cat E</a></li>
+                      </ul>
+                    </li>
+                    <li class="submenu">
+                      <a href="#">Entretenimento</a>
+                      <ul>
+                        <li><a href="#">Cat A</a></li>
+                        <li><a href="#">Cat B</a></li>
+                        <li><a href="#">Cat C</a></li>
+                        <li><a href="#">Cat D</a></li>
+                        <li><a href="#">Cat E</a></li>
+                      </ul>
+                    </li>
+                      <li><a href="{% url 'explore' %}">Todos →</a></li>
                   </ul>
                 </li>
 
@@ -54,24 +92,14 @@
                 <li class="submenu">
                   <a href="#">Mapas</a>
                   <ul>
-                    <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                    <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                    <li><a href="no-sidebar.html">No Sidebar</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="submenu">
-                      <a href="#">Submenu</a>
-                      <ul>
-                        <li><a href="#">Dolore Sed</a></li>
-                        <li><a href="#">Consequat</a></li>
-                        <li><a href="#">Lorem Magna</a></li>
-                        <li><a href="#">Sed Magna</a></li>
-                        <li><a href="#">Ipsum Nisl</a></li>
-                      </ul>
-                    </li>
+                    <li><a href="#">Maricá</a></li>
+                    <li><a href="#">Inoa</a></li>
+                    <li><a href="#">Itaipuacu</a></li>
+                    <li><a href="#">Ponta Negra</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="button primary">Sign Up</a>
+                  <a href="#" class="button primary">Entrar</a>
                 </li>
               </ul>
             </nav>
@@ -80,6 +108,27 @@
             {% block content %}
 
             {% endblock %}
+              <footer id="footer">
+
+                <ul class="icons">
+                  <li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
+                  <li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+                </ul>
+
+                <ul class="copyright">
+                  <li>&copy; Gabriela Peroni</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+
+              </footer>
+          </div>
+            <script src="static/js/jquery.min.js"></script>
+            <script src="static/js/jquery.dropotron.min.js"></script>
+            <script src="static/js/jquery.scrolly.min.js"></script>
+            <script src="static/js/jquery.scrollex.min.js"></script>
+            <script src="static/js/browser.min.js"></script>
+            <script src="static/js/breakpoints.min.js"></script>
+            <script src="static/js/util.js"></script>
+            <script src="static/js/main.js"></script>
         </div>
       </body>
     </html>

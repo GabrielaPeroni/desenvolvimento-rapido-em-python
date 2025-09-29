@@ -6,5 +6,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("app.urls")),          # home page
     path("accounts/", include("accounts.urls")),  # login system
-    path("explorar/", include("explore.urls")),
+    path("explore/", include("explore.urls")),
 ]
