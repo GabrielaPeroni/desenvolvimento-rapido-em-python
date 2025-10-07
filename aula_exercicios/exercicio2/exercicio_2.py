@@ -2,7 +2,7 @@ import os
 
 class Exercicio2:
     def __init__(self, nome_arquivo):
-        self.nome_arquivo = os.path.join('exercicios', 'exercicio2', nome_arquivo)
+        self.nome_arquivo = os.path.join('aula_exercicios', 'exercicio2', nome_arquivo)
         
     def nome_string(self) -> None:
         """
@@ -75,7 +75,7 @@ class Exercicio2:
         """
             5. Tendo um arquivo de texto, conte quantas palavras e linhas tem; verifica se está no diretório.
         """
-        caminho = os.path.join('exercicios', 'exercicio2', 'numero_palavras.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio2', 'numero_palavras.txt')
         try:
             with open(caminho, 'r') as file:
                 linhas = file.readlines()
@@ -94,7 +94,7 @@ class Exercicio2:
             6. Leia um nome completo, mude as iniciais para maiúscula e salve em um arquivo; verifica se nome e arquivo são válidos.
         """
         nome_input = input("Digite seu nome completo: ")
-        caminho = os.path.join('exercicios', 'exercicio2', 'mudar_iniciais.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio2', 'mudar_iniciais.txt')
         if not all(c.isalpha() or c.isspace() for c in nome_input) or len(nome_input.strip()) == 0:
             raise ValueError("Nome inválido, use apenas letras.")
 
@@ -141,6 +141,6 @@ def main():
                 print("Opcao invalida")
 
 if __name__ == '__main__':
-    if not os.path.exists(os.path.join('exercicios', 'exercicio2')):
-        os.makedirs(os.path.join('exercicios', 'exercicio2'))
+    if not os.path.exists(os.path.join('aula_exercicios', 'exercicio2')):
+        os.makedirs(os.path.join('aula_exercicios', 'exercicio2'))
     main()

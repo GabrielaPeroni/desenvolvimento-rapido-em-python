@@ -4,14 +4,14 @@ import os
 
 class Exercicio1():
     def __init__(self, nome_arquivo):
-        self.nome_arquivo = os.path.join('exercicios', 'exercicio1', nome_arquivo)
+        self.nome_arquivo = os.path.join('aula_exercicios', 'exercicio1', nome_arquivo)
 
     def tabuada_nove(self):
         """
             1. Elabore um programa em Python que insere a tabuada de multiplicação de 9 em um arquivo txt.
         """
         lines = []
-        caminho = os.path.join('exercicios', 'exercicio1', 'tabuada_nove.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio1', 'tabuada_nove.txt')
         for num in range(1, 11):
             resultado = num * 9
             lines.append(f"{num} X 9 = {resultado}")
@@ -30,7 +30,7 @@ class Exercicio1():
             2. Faça um programa que leia os dados de uma pessoa (Nome, RG, CPF, ano de nascimento e armazene em 
             um arquivo txt, calculando a idade da pessoa.
         """
-        caminho = os.path.join('exercicios', 'exercicio1', 'dados_pessoa.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio1', 'dados_pessoa.txt')
 
         nome = str(input("Nome: "))
         rg = int(input("RG: "))
@@ -60,7 +60,7 @@ class Exercicio1():
             3. Faça um programa que leia um arquivo txt e insere cada linha em uma lista.
         """
         lines = []
-        caminho = os.path.join('exercicios', 'exercicio1', 'ler_arquivo.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio1', 'ler_arquivo.txt')
         with open(caminho, "r") as file:
             lines = [line.strip() for line in file.readlines()]
 
@@ -74,7 +74,7 @@ class Exercicio1():
             final e se o mesmo foi Aprovado (média >=6) ou Reprovado (média < 6).
         """
         nome = str(input("Nome do aluno: "))
-        caminho = os.path.join('exercicios', 'exercicio1', 'resultado_aluno.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio1', 'resultado_aluno.txt')
 
         notas = []
         for i in range(0, 2):
@@ -109,7 +109,7 @@ class Exercicio1():
         """
         num1 = int(input("Digite o primeiro número inteiro: "))
         num2 = int(input("Digite o segundo número inteiro: "))
-        caminho = os.path.join('exercicios', 'exercicio1', 'resultados_calculadora.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio1', 'resultados_calculadora.txt')
 
         soma = num1 + num2
         subtracao = num1 - num2
@@ -135,8 +135,8 @@ class Exercicio1():
             6. Elabore um programa em Python que leia uma cadeia de DNA e gera a cadeia inversa. 
             Faça a leitura da cadeia utilizando arquivo txt. Exemplo: Entrada: AATCTGCAC Saída: CACGTCTAA
         """
-        caminho_input = os.path.join('exercicios', 'exercicio1', 'dna.txt')
-        caminho_output = os.path.join('exercicios', 'exercicio1', 'dna_invertido.txt')
+        caminho_input = os.path.join('aula_exercicios', 'exercicio1', 'dna.txt')
+        caminho_output = os.path.join('aula_exercicios', 'exercicio1', 'dna_invertido.txt')
         with open(caminho_input, "r") as file:
             dna = file.read().strip().upper()
 
@@ -153,7 +153,7 @@ class Exercicio1():
             7. Faça um programa que leia um texto de um arquivo txt e conte quantas palavras tem nesse arquivo, 
             sem considerar os espaços.
         """
-        caminho = os.path.join('exercicios', 'exercicio1', 'contar_palavras.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio1', 'contar_palavras.txt')
         with open(caminho, "r") as file:
             texto = file.read()
             palavras = texto.split()
@@ -167,8 +167,8 @@ class Exercicio1():
         """
             8. Faça um programa que Python que lê um texto de um arquivo txt e substitua todos os espaços por underline (_).
         """
-        input_file =  os.path.join('exercicios', 'exercicio1', 'espaco_normal.txt')
-        output_file =  os.path.join('exercicios', 'exercicio1', 'espaco_substituido.txt')
+        input_file =  os.path.join('aula_exercicios', 'exercicio1', 'espaco_normal.txt')
+        output_file =  os.path.join('aula_exercicios', 'exercicio1', 'espaco_substituido.txt')
         with open(input_file, "r") as file:
             texto = file.read()
         
@@ -185,7 +185,7 @@ class Exercicio1():
             Exemplo: A frase lida de um arquivo: “futebol tequila bola futebol torcida bola goleiro”, deve ir para a lista [“futebol”, “tequila”, “bola”, “torcida”, “goleiro”]
         """
         unique_words = []
-        caminho = os.path.join('exercicios', 'exercicio1', 'inserir_frase.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio1', 'inserir_frase.txt')
 
         with open(caminho, "r") as file:
             for line in file:
@@ -240,6 +240,6 @@ def main():
                 print("Opcao invalida")
 
 if __name__ == '__main__':
-    if not os.path.exists(os.path.join('exercicios', 'exercicio1')):
-        os.makedirs(os.path.join('exercicios', 'exercicio1'))
+    if not os.path.exists(os.path.join('aula_exercicios', 'exercicio1')):
+        os.makedirs(os.path.join('aula_exercicios', 'exercicio1'))
     main()

@@ -3,7 +3,7 @@ import string
 
 class Exercicio3:
     def __init__(self, nome_arquivo):
-        self.nome_arquivo = os.path.join('exercicios', 'exercicio3', nome_arquivo)
+        self.nome_arquivo = os.path.join('aula_exercicios', 'exercicio3', nome_arquivo)
 
     def ler_ou_criar_arquivo(self):
         """
@@ -24,7 +24,7 @@ class Exercicio3:
             2) (Contar linhas não vazias) Leia um arquivo “frases.txt” e exiba quantas linhas não estão vazias
             (desconsidere espaços). Trate PermissionError imprimindo uma mensagem amigável.
         """
-        caminho = os.path.join('exercicios', 'exercicio3', 'frases.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio3', 'frases.txt')
         try:
             with open(caminho, 'r') as arquivo:
                 linhas = arquivo.readlines()
@@ -43,7 +43,7 @@ class Exercicio3:
             reticências “...” por um único “.”. Salve em “comentarios.txt”. Use try/except para lidar
             com UnicodeDecodeError (tente utf-8 e, se falhar, latin-1).
         """
-        caminho = os.path.join('exercicios', 'exercicio3', 'comentarios.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio3', 'comentarios.txt')
         try:
             with open(caminho, 'r', encoding='utf-8') as arquivo:
                 conteudo = arquivo.read()
@@ -69,7 +69,7 @@ class Exercicio3:
             separe na primeira vírgula e monte um dicionário {nome: time}. Ignore linhas inválidas (sem
             vírgula) e registre-as em “linhas_invalidas.log”. Use try/except no split e na escrita do log.
         """
-        caminho = os.path.join('exercicios', 'exercicio3', 'jogadores_times.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio3', 'jogadores_times.txt')
         jogadores_times = {}
         try:
             with open(caminho, 'r') as arquivo:
@@ -81,7 +81,7 @@ class Exercicio3:
                     except ValueError:
                         linhas_invalidas.append(linha.strip())
 
-            log_path = os.path.join('exercicios', 'exercicio3', 'linhas_invalidas.log')
+            log_path = os.path.join('aula_exercicios', 'exercicio3', 'linhas_invalidas.log')
             with open(log_path, 'w') as log:
                 print("linhas inválidas salvas em 'linhas_invalidas.log'")
                 for linha in linhas_invalidas:
@@ -102,7 +102,7 @@ class Exercicio3:
         """
         itens = set()
         arquivos = ['lista_a.txt', 'lista_b.txt']
-        caminhos = [os.path.join('exercicios', 'exercicio3', nome) for nome in arquivos]
+        caminhos = [os.path.join('aula_exercicios', 'exercicio3', nome) for nome in arquivos]
 
         for caminho in caminhos:
             try:
@@ -112,7 +112,7 @@ class Exercicio3:
                 print(f"arquivo '{caminho}' não encontrado... criando o arquivo")
                 open(caminho, 'w').close()
 
-        uniq_path = os.path.join('exercicios', 'exercicio3', 'lista_uniq.txt')
+        uniq_path = os.path.join('aula_exercicios', 'exercicio3', 'lista_uniq.txt')
         itens_ordenados = sorted(itens)
         with open(uniq_path, 'w', encoding='utf-8') as arquivo:
             print("arquivo 'lista_uniq.txt' criado com sucesso")
@@ -125,7 +125,7 @@ class Exercicio3:
             quantidade de palavras distintas. Trate FileNotFoundError e mostre 'arquivo texto.txt não
             encontrado'.
         """
-        caminho = os.path.join('exercicios', 'exercicio3', 'texto.txt')
+        caminho = os.path.join('aula_exercicios', 'exercicio3', 'texto.txt')
         try:
             with open(caminho, 'r') as arquivo:
                 conteudo = arquivo.read().lower()
@@ -145,7 +145,7 @@ class Exercicio3:
         """
         itens = set()
         arquivos = ['lista_a.txt', 'lista_b.txt']
-        caminhos = [os.path.join('exercicios', 'exercicio3', nome) for nome in arquivos]
+        caminhos = [os.path.join('aula_exercicios', 'exercicio3', nome) for nome in arquivos]
 
         for caminho in caminhos:
             if os.path.exists(caminho):
@@ -154,7 +154,7 @@ class Exercicio3:
             else:
                 print(f"arquivo '{caminho}' não encontrado...")
 
-        unica_path = os.path.join('exercicios', 'exercicio3', 'lista_unica.txt')
+        unica_path = os.path.join('aula_exercicios', 'exercicio3', 'lista_unica.txt')
         itens_ordenados = sorted(itens)
         with open(unica_path, 'w', encoding='utf-8') as arquivo:
             print("arquivo 'lista_unica.txt' criado com sucesso")
@@ -199,6 +199,6 @@ def main():
 
 
 if __name__ == '__main__':
-    if not os.path.exists(os.path.join('exercicios', 'exercicio3')):
-        os.makedirs(os.path.join('exercicios', 'exercicio3'))
+    if not os.path.exists(os.path.join('aula_exercicios', 'exercicio3')):
+        os.makedirs(os.path.join('aula_exercicios', 'exercicio3'))
     main()
