@@ -13,7 +13,7 @@ git clone https://github.com/GabrielaPeroni/desenvolvimento-rapido-em-python
 cd desenvolvimento-rapido-em-python
 ```
 
-##### 3. Instale as dependências e ative o ambiente virtual do Poetry
+##### 3. Instale as dependências e ative o ambiente virtual
 ```bash
 make setup
 ```
