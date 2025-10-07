@@ -15,25 +15,19 @@ cd desenvolvimento-rapido-em-python
 
 ##### 3. Instale as dependências e ative o ambiente virtual do Poetry
 ```bash
-poetry install
-poetry shell
+make setup
 ```
 
-##### 5. Execute as migrações
+##### 4. Execute as migrações e inicie o servidor
 ```bash
-python manage.py migrate
-```
-
-##### 6. Inicie o servidor
-```bash
-python manage.py runserver
+make start
 ```
 
 ## ✨ Observações
 
 - Projeto criado para fins acadêmicos para a matéria 'Desenvolvimento Rápido em Python'
 - A estrutura permite adicionar múltiplos apps e páginas facilmente.
-- Todas as dependências gerenciadas com Poetry.
+- Todas as dependências gerenciadas com Poetry e Makefile.
 
 
 ## 📜 Licença
